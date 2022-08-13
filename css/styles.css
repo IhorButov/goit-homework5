@@ -343,7 +343,6 @@ html {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-
 .hero-button-close {
   display: flex;
   width: 30px;
@@ -355,8 +354,6 @@ html {
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.team-icon {
 }
 
 /* --- Тайтл секций ---  */
