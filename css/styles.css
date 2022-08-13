@@ -154,6 +154,7 @@ html {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  fill: currentColor;
 }
 
 .phone-icon,
@@ -161,11 +162,6 @@ html {
   margin-right: 10px;
   fill: currentColor;
 }
-.mail-link,
-.phone-link {
-  fill: currentColor;
-}
-
 .header-contancts-links:hover,
 .header-contancts-links:focus,
 .map:hover,
@@ -209,6 +205,7 @@ html {
 .main-header .header-contacts {
   margin-left: auto;
 }
+
 .current::after {
   content: "";
   position: absolute;
