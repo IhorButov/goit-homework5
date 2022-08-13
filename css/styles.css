@@ -373,15 +373,15 @@ html {
 }
 .gallery-list {
   display: flex;
+  gap: 30px;
 }
-.gallery-list .gallery-item:not(:last-child) {
-  margin-right: 30px;
-}
-.gallery-item {
+.gallery-thumb {
   position: relative;
 }
 .gallery-text {
+  display: flex;
   position: absolute;
+  bottom: 0;
   padding: 27px 82px;
   width: 370px;
   height: 70px;
@@ -389,9 +389,10 @@ html {
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
+  justify-content: center;
   text-transform: uppercase;
   color: var(--filterbutton-bg-color);
-  background-color: rgba(47, 48, 58, 0.8);
+  background: rgba(47, 48, 58, 0.8);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
