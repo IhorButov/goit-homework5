@@ -112,6 +112,8 @@ html {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.hero-button {
+}
 
 /* --- Логотип ---  */
 .header-logo {
@@ -136,6 +138,9 @@ html {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--logo-primary-text);
 }
 .nav-link.link.current {
@@ -162,8 +167,17 @@ html {
   margin-right: 10px;
   fill: currentColor;
 }
+.header-contancts-links {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-contancts-links:hover,
-.header-contancts-links:focus,
+.header-contancts-links:focus {
+  color: var(--accent-color);
+}
+
 .map:hover,
 .footer-contacts:hover,
 .map:focus,
@@ -241,11 +255,15 @@ html {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primaty-bg-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--footer-contacts-color);
 }
 .map:focus {
@@ -328,7 +346,7 @@ html {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
-  opacity: 0.75;
+  opacity: 0;
   pointer-events: none;
 }
 .modal {
@@ -415,7 +433,6 @@ html {
   position: relative;
 }
 .gallery-text {
-  display: flex;
   position: absolute;
   bottom: 0;
   padding: 27px 82px;
@@ -499,6 +516,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--main-icon-color-color);
 }
 .team-social-link:hover,
@@ -511,6 +531,38 @@ html {
   fill: currentColor;
 }
 
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.menu-item {
+  outline: 1px solid red;
+  position: relative;
+}
+.menu-link {
+  display: block;
+  padding: 30px 20px;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+}
+.submenu {
+  position: absolute;
+  padding: 15px;
+  left: 1000;
+  top: 100%;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  background-color: yellow;
+  display: none;
+}
+.menu-item:hover .submenu {
+  display: block;
+}
 /* --- Клиенты --- */
 .section-clients {
   padding: 94px 0;
@@ -530,6 +582,9 @@ html {
   justify-content: center;
   align-items: center;
   color: var(--main-icon-color);
+  transition-property: border, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: currentColor;
@@ -567,6 +622,8 @@ html {
   background: rgba(255, 255, 255, 0.1);
   align-items: center;
   fill: var(--second-icon-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-link:hover,
@@ -589,6 +646,8 @@ html {
   text-align: center;
   border-radius: 4px;
   letter-spacing: 0.03em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--filterbutton-main-color);
   background-color: var(--filterbutton-bg-color);
 }
