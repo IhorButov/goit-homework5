@@ -328,6 +328,7 @@ html {
   background-color: var(--accent-color);
   border-radius: 4px;
 }
+/* --- Модалка ---  */
 .backdrop {
   position: fixed;
   top: 0;
@@ -344,14 +345,16 @@ html {
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -369,6 +372,9 @@ html {
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-title {
+  align-items: center;
 }
 
 /* --- Тайтл секций ---  */
