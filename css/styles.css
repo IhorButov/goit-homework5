@@ -819,7 +819,7 @@ html {
   display: none;
 }
 .input-form:not(:focus):not(:placeholder-shown):valid {
-  background-color: green;
+  background-color: transparent;
 }
 .input-form:not(:focus):not(:placeholder-shown):invalid {
   background-color: red;
