@@ -55,20 +55,53 @@
                             </button>
                             <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
                             <form class="main-form">
-                                <label for="name" class="input-name">Имя</label>
-                                <input type="name" name="user-name" id="name" class="input-form" required placeholder=" ">
-                                <p class="error">Поле незаполненное</p>
-                                <label for="tel" class="input-name">Телефон</label>
-                                <input type="tel" name="phone_number" id="tel" class="input-form" required minlength="10" maxlength="10" placeholder=" ">
-                                <p class="error">Поле незаполненное</p>
-                                <label for="email" class="input-name">Почта</label>
-                                <input type="email" name="user-email" id="email" class="input-form" required placeholder=" ">
-                                <p class="error">Поле незаполненное</p>
-                                <label for="comment" class="input-name">Комментарий</label>
+                                <div class="modal-input">
+                                    <label for="name" class="input-name">Имя</label>
+                                    <span class="input-wrap"><input type="name" name="user-name" id="name" class="input-form" required placeholder=" ">
+                                        <svg class="input-icon" width="18" height="18">
+                                            <use href="./images/form-icons.svg#icon-form-name"></use>
+                                        </svg>
+                                        <p class="error">Поле незаполненное</p>
+                                    </span>
+                                </div> 
+                                <div class="modal-input">
+                                    <label for="tel" class="input-name">Телефон</label>
+                                    <span class="input-wrap">
+                                        <input type="tel" name="phone_number" id="tel" class="input-form" required minlength="10" maxlength="10" placeholder=" ">
+                                        <svg class="input-icon" width="18" height="18">
+                                            <use href="./images/form-icons.svg#icon-form-tel"></use>
+                                        </svg>
+                                    </span>
+                                    <p class="error">Поле незаполненное</p>
+                                </div>
+                                <div class="modal-input">
+                                    <label for="email" class="input-name">Почта</label>
+                                    <span class="input-wrap">
+                                        <input type="email" name="user-email" id="email" class="input-form" required placeholder=" ">
+                                            <svg class="input-icon" width="18" height="18">
+                                                <use href="./images/form-icons.svg#icon-form-email"></use>
+                                            </svg>
+                                    <p class="error">Поле незаполненное</p>
+                                    </span>
+                                </div>
+                                <div class="modal-input">
+                                    <label for="comment" class="input-name">Комментарий</label>
                                 <textarea name="comment" id="comment" class="comment-text">Введите текст</textarea>
-                                <!-- <input type="comment" name="comment" id="comment" placeholder="Введите текст" class="input-form"> -->
-                                <input type="checkbox" name="policy" id="policy">
-                                <label for="policy" class="policy" required>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank" class="policy-link">Условия договора</a></label>
+                                </div>
+                                <!-- <div class="modal-input-policy">
+                                    <input type="checkbox" name="policy" id="policy" class="policy-input">
+                                    <label for="policy" class="policy-text" required>Соглашаюсь с рассылкой и принимаю <a href="" target="_blank" class="policy-link">Условия договора</a></label>
+                                </div> -->
+                                <div class="modal-input-policy">
+                                    <input type="checkbox" name="policy" id="policy" class="policy-input-main visually-hidden">
+                                    <label for="policy" class="policy-text-main" required>
+                                        <span>
+                                            <svg class="input-icon-main" width="16" height="15">
+                                                <use href="./images/form-icons.svg#icon-checkin"></use>
+                                            </svg>
+                                        </span>Соглашаюсь с рассылкой и принимаю<a href="" target="_blank" class="policy-link"> Условия договора</a>
+                                    </label>
+                                </div>
                             </form>
                             <button type="submit" class="modal-button-close">Отправить</button>
                         </div>
@@ -188,7 +221,6 @@
                         <div class="container-job">
                             <h3 class="team-title">Ольга Репина</h3>
                             <p lang="en" class="team-job">Frontend Developer</p>
-                            <div class="team-social">
                                 <ul class="team-social-list list">
                                     <li class="team-social-item">
                                         <a href="" class="team-social-link link">
@@ -219,7 +251,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
                         </div>
                     </li>
                     <li class="team-item">
@@ -227,7 +258,6 @@
                         <div class="container-job">
                             <h3 class="team-title">Николай Тарасов</h3>
                             <p lang="en" class="team-job">Marketing</p>
-                            <div class="team-social">
                                 <ul class="team-social-list list">
                                     <li class="team-social-item">
                                         <a href="" class="team-social-link link">
@@ -258,7 +288,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
                         </div>
                     </li>
                     <li class="team-item">
@@ -266,7 +295,6 @@
                         <div class="container-job">
                             <h3 class="team-title">Михаил Ермаков</h3>
                             <p lang="en" class="team-job">UI Designer</p>
-                            <div class="team-social">
                                 <ul class="team-social-list list">
                                     <li class="team-social-item">
                                         <a href="" class="team-social-link link">
@@ -297,7 +325,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
                         </div>
                     </li>
                 </ul>
@@ -401,17 +428,19 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <form>
-                    <p class="modal-footer-title">Подпишитесь на рассылку</p>
-                    <label>
-                        <input class="footer-email" type="email" name="email" id="email" required placeholder="E-mail">
-                    </label>
-                </form>
-                <button type="submit" class="footer-modal-button"><span>Подписаться</span>
-                    <svg class="footer-modal-icon" width="24px" height="24px">
-                        <use href="./images/icons.svg#icon-telegram"></use>
-                    </svg>
-                </button>
+                <p class="modal-footer-title">Подпишитесь на рассылку</p>
+                <div class="modal-footer-form">
+                    <form>
+                        <label>
+                            <input class="footer-email" type="email" name="email" id="email" required placeholder="E-mail">
+                        </label>
+                    </form>
+                    <button type="submit" class="footer-modal-button">Подписаться
+                        <svg class="footer-modal-icon" width="24px" height="24px">
+                            <use href="./images/telegram1.svg#icon-telegram"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
